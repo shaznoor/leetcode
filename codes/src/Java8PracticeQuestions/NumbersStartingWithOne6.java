@@ -6,6 +6,7 @@ package Java8PracticeQuestions;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class NumbersStartingWithOne6 {
     public static void main(String[] args) {
@@ -15,7 +16,12 @@ public class NumbersStartingWithOne6 {
                 .filter(val -> String.valueOf(val).startsWith("1"))
                 .toList();
 
+        /*List<String> list = numbers.stream().map(s -> s + "")
+                .filter(s -> s.startsWith("1"))
+                .toList();*/
+
         System.out.println(result);
+        //System.out.println(list);
     }
 }
 

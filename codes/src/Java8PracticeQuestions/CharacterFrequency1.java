@@ -4,6 +4,7 @@ Input: "programming"*/
 
 package Java8PracticeQuestions;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
@@ -16,6 +17,9 @@ public class CharacterFrequency1 {
                 input.chars()
                         .mapToObj(c -> (char) c)
                         .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+        /*Map<String, Long> map = Arrays.stream(input.split(""))
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));*/
 
         frequencyMap.forEach((character, count) -> System.out.println(character + ": " + count));
     }

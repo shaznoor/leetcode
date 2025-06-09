@@ -15,7 +15,12 @@ public class LongestString5 {
                 .max(Comparator.comparingInt(String::length))
                 .orElse(null);
 
+        /*String redLongest = Arrays.stream(words)
+                .reduce((w1, w2) -> w1.length() > w2.length() ? w1 : w2)
+                .get();*/
+
         System.out.println(longest);
+        //System.out.println(redLongest);
     }
 }
 
